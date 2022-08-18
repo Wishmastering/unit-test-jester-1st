@@ -1,5 +1,6 @@
+// one euro is:
 let oneEuroIs = {
-    "JPY": 127.9, // japan yen
+    "JPY": 127, // japan yen
     "USD": 1.2, // us dollar
     "GBP": 0.8, // british pound
 }
@@ -8,30 +9,26 @@ let oneEuroIs = {
 // Pero debe pasar primero de DOLAR a EURO 
 // Y luego de EURO A YEN
 
-function fromDollarToYen(dollar){
-    let dolToEur = dollar / oneEuroIs.USD;
-    let eurToYen = dolToEur * oneEuroIs.JPY;
-    
-    return eurToYen;
+function fromDollarToYen(dollar){   
+    let valueDolEuro = dollar / oneEuroIs.USD;
+    let valueEuroYen = valueDolEuro * oneEuroIs.JPY;
+    return valueEuroYen;
 }
-
 
 // Esta funcion convierte de Euro a Dolares
 function fromEuroToDollar(euro){
-    let eurToDol = euro * oneEuroIs.USD;
-
-    return (eurToDol);
+    let valueEuroDol = euro * oneEuroIs.USD;
+    return valueEuroDol;
 }
 
 
 // Esta funcion convierte de YEN a POUND
 // Pero debe pasar primero de YEN a EURO 
 // Y luego de EURO A POUND
-function fromYantoPound(yan){
-    let yanToEuro = yan / oneEuroIs.JPY;
-    let eurToPound = yanToEuro * oneEuroIs.GBP;
-    yanToEuro
-    return eurToPound;
+function fromYanToPound(yan){
+    let valueYanEuro = yan / oneEuroIs.JPY;
+    let valueEuroPound = valueYanEuro * oneEuroIs.GBP;
+    return valueEuroPound;
 }
 
-module.exports = {fromDollarToYen, fromEuroToDollar, fromYantoPound}
+module.exports = {fromDollarToYen, fromEuroToDollar, fromYanToPound}
